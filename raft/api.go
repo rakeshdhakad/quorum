@@ -22,13 +22,13 @@ func (s *PublicRaftAPI) Role() string {
 	return s.raftService.raftProtocolManager.NodeInfo().Role
 }
 
-func (s *PublicRaftAPI) AddPeer(enodeId string) (uint16, error) {
-	return s.raftService.raftProtocolManager.ProposeNewPeer(enodeId)
-}
+// func (s *PublicRaftAPI) AddPeer(enodeId string) (uint16, error) {
+// 	return s.raftService.raftProtocolManager.ProposeNewPeer(enodeId)
+// }
 
-func (s *PublicRaftAPI) RemovePeer(raftId uint16) {
-	s.raftService.raftProtocolManager.ProposePeerRemoval(raftId)
-}
+// func (s *PublicRaftAPI) RemovePeer(raftId uint16) {
+// 	s.raftService.raftProtocolManager.ProposePeerRemoval(raftId)
+// }
 
 func (s *PublicRaftAPI) Leader() (string, error) {
 	addr, err := s.raftService.raftProtocolManager.LeaderAddress()

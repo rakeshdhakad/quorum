@@ -615,16 +615,6 @@ web3._extend({
                        name: 'role',
                        getter: 'raft_role'
                }),
-               new web3._extend.Method({
-                       name: 'addPeer',
-                       call: 'raft_addPeer',
-                       params: 1
-               }),
-               new web3._extend.Method({
-                       name: 'removePeer',
-                       call: 'raft_removePeer',
-                       params: 1
-               }),
                new web3._extend.Property({
                        name: 'leader',
                        getter: 'raft_leader'
